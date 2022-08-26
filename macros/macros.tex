@@ -1,0 +1,49 @@
+%%% This is a place to define newcommands and latex shortcuts
+
+\newcommand{\PdfPsText}[2]{
+	\ifpdf
+	#1
+	\else
+	#2
+	\fi
+}
+
+\newcommand{\IncludeGraphicsH}[3]{
+	\PdfPsText{\includegraphics[height=#2]{#1}}{\includegraphics[bb = #3, height=#2]{#1}}
+}
+
+\newcommand{\IncludeGraphicsW}[3]{
+	\PdfPsText{\includegraphics[width=#2]{#1}}{\includegraphics[bb = #3, width=#2]{#1}}
+}
+
+\newcommand{\InsertFig}[3]{
+	\begin{figure}[!htbp]
+		\begin{center}
+			\leavevmode
+			#1
+			\caption{#2}
+			\label{#3}
+		\end{center}
+	\end{figure}
+}
+
+\newcommand{\I}{{\rm i}} 
+
+\def\lsim{\raise0.3ex\hbox{$\;<$\kern-0.75em\raise-1.1ex\hbox{$\sim\;$}}}
+\def\gsim{\raise0.3ex\hbox{$\;>$\kern-0.75em\raise-1.1ex\hbox{$\sim\;$}}}
+
+\def\f{\frac}
+\def\<{\langle}
+\def\>{\rangle}
+\def\del{\partial}
+\def\mes[#1]{d^{3}{#1}}
+
+\newcommand{\vect}[1]{{\boldsymbol{#1}}}
+\newcommand{\B}[1]{{\bar{1}}}
+\newcommand{\BD}[1]{{\dot \bar{1}}}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\quarter}{\frac{1}{4}}
+\newcommand{\sixth}{\frac{1}{6}}
+
+
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}

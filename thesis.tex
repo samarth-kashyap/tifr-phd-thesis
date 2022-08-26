@@ -1,0 +1,210 @@
+%=============================================================================
+% Format for PhD thesis in Physics at the Tata Institute of Fundamental Research. 
+% Based on LaTeX "book" class. The document format used here are in 
+% accordance to the specifications mentioned on the website of 
+% Subject Board of Physics and formats presented on Datanet2.0. 
+% 
+% This format is stored in a public repository
+% https://github.com/samarth-kashyap/tifr-thesis
+%
+% This is the main file that would be compiled. All the other
+% files are organized under the main directory under the following
+% directory names
+% 1. tifr-thesis/preamble: contains the title page and all the other mandatory 
+%    pages before the table-of-contents (TOC)
+%
+% 2. tifr-thesis/chapters: Each chapter needs to be placed in a separate .tex file
+%    inside this folder.
+%
+% 3. tifr-thesis/figures: all the figures are to be placed here
+%
+% 4. tifr-thesis/appendix: all the .tex files corresponding to appendices are
+%    to be placed here
+%
+%------------------------------------------------------------------------
+% A custom BibTeX style file, tifr-thesis-ads.bst has also been created which 
+% creates references in the following format: 
+%
+% EINSTEIN, Albert and BOHR, Neils, "Title of the paper" Title of the Journal, 
+% (56) 133, (August 1942) [arXiv:12345.12]
+%
+% - the journal name string hyperlinks to the doi of the paper
+% - the arXiv number hyperlinks to arXiv page
+%
+% ++++++++++++++++++++++ IMPORTANT NOTE ++++++++++++++++++++++++++++++++++
+% All the places where your input is needed are commented using a tag <USER-IP>
+% Search the document for <USER-IP> and modify all the lines appropriately.
+%
+% Please feel free to use the format and modify as you please!
+% - Samarth Ganesh Kashyap, August 2022
+%=============================================================================
+\documentclass[a4paper,12pt]{book}   % 12-font as per specification
+\usepackage[margin=1.00in]{geometry} % setting margins to be 1 inch
+\usepackage[utf8]{inputenc}
+
+\usepackage{setspace} % for changing line-spacing
+\usepackage{fancyhdr} % for fancy header and footer
+\usepackage{graphicx} % for including figures
+\usepackage{varwidth} % for paper1
+\usepackage{mathdots} % differnt types of ellipsis in eqn
+\usepackage{booktabs}
+\usepackage{varwidth}
+\usepackage{paralist}
+\usepackage{appendix} % for including appendices
+\usepackage{capt-of}  % or \usepackage{caption}
+\usepackage{natbib}   % for custom bibliography
+\usepackage{lipsum}   % for adding test-text
+\usepackage{xcolor}   % access to colored text
+%------------------------------------------------------------------------
+% defining custom colors using their HTML codes
+% All colors available https://www.computerhope.com/htmcolor.htm#color-codes
+\definecolor{freakishgreen}{HTML}{0A982B}
+\definecolor{denimdarkblue}{HTML}{151B8D}
+\definecolor{chillipepper}{HTML}{C11B17}
+\definecolor{MyDarkBlue1}{rgb}{0,0.08,0.45}
+\definecolor{ferrarired}{HTML}{F70D1A}
+\definecolor{darkgreen}{HTML}{006400}
+\definecolor{seagreen}{HTML}{2E8B57}
+\definecolor{bluejay}{HTML}{2B547E}
+\definecolor{winered}{HTML}{990012}
+%------------------------------------------------------------------------
+%            linktocpage,  % use this to get links on toc pagenumbers
+\usepackage[bookmarks,
+            bookmarksopen=true,
+            bookmarksnumbered=true,
+            breaklinks=true,
+            pagebackref,
+            colorlinks=true,
+            linkcolor=winered,
+            urlcolor=darkgreen,
+            filecolor=winered,
+            citecolor=blue,
+            anchorcolor=winered,
+            hyperindex=true,
+            hyperfigures
+            ]{hyperref}
+
+\setstretch{1.25}  % <USER-IP> specification is 1.5, but it looks ugly
+%--------------------------------------------------------------
+% adding paper details to chapter
+% Replace the use of \chapter{Name of chapter} to 
+% \thischapter{Name of Chapter}{Details of published paper}
+\usepackage{xparse}
+\NewDocumentCommand{\thesischapter}{o m m}{%
+   \IfNoValueTF{#1}
+     {\chapter[#2]{#2\origtitle{#3}}}
+     {\chapter[#1]{#2\origtitle{#3}}}%
+}
+\newcommand\origtitle[1]{\\
+  \parbox{\textwidth}{\normalsize\vspace*{2\baselineskip}#1}}
+%--------------------------------------------------------------
+% book automatically inserts blank page so that new chapter
+% begins on an odd page. To remove the headers on the blank
+% page, the following is used.
+\makeatletter
+\renewcommand*{\cleardoublepage}{\clearpage\if@twoside \ifodd\c@page\else
+\hbox{}%
+\thispagestyle{empty}%
+\newpage%
+\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+%----------------------------------------------------------
+\newcommand{\tr}[1]{\textcolor[rgb]{1,0,0}{#1}}
+\newcommand{\tb}[1]{\textcolor[rgb]{0,0,1}{#1}}
+\newcommand{\tg}[1]{\textcolor[rgb]{0,1,0}{#1}}
+\graphicspath{{./figures/}}  % setting default graphics path to tifr-thesis/figures/
+
+\author{Samarth Ganesh Kashyap}  % <USER-IP> Author of the thesis
+\input{macros/std-macros}        % standard math macros
+\input{macros/title-macro}       % macro for title-page (TIFR)
+\input{macros/custom-macros}     % custom math macros for this document
+\input{macros/abstract-macro}    % macro for abstract page
+
+
+\begin{document}
+%---------------- macro for creating title-page ---------------------------
+\thispagestyle{empty}
+\tifrtitle
+{Measuring Solar Surface and}           % <USER-IP> line1 of title
+{Internal Flows using Helioseismology}  % <USER-IP> line2 of title
+{Physics}                               % <USER-IP> subject
+{Samarth Ganesh Kashyap}                % <USER-IP> name
+{Astronomy \& Astrophysics}             % <USER-IP> department name
+{August 2022}                           % <USER-IP> submission month-year
+{August 2022}                           % <USER-IP> FINAL submission month-year
+%-----------------------------------------------------------------------
+% Front matter contains 5 sections. Mandatory sections are shown with a 
+% (*) in front of the description. 
+%
+% 1. (*) List of collaborators: if work presented in the thesis was done as 
+%    part of a collaboration. 
+%    file to edit: tifr-thesis/preamble/collaborators
+%
+% 2. (*) List of publications: List of all publications during the PhD. 
+%    Make a list of publications that are part of thesis and other 
+%    publications 
+%    file to edit: tifr-thesis/preamble/publications
+%
+% 3. (*) Abstract: abstract for your thesis.
+%    file to edit: tifr-thesis/preamble/abstract
+%
+% 4. Acknowledgements: acknowledging the help of all the parties 
+%    who have directly or indirectly helped in the successful completion
+%    of PhD.
+%    file to edit: tifr-thesis/preamble/acknowledgements
+%
+% 5. Dedication: dedication page
+%    file to edit: tifr-thesis/preamble/dedication
+%-----------------------------------------------------------------------
+\frontmatter
+% <USER-IP> Edit the relevant files described above, located in
+% tifr-thesis/preamble
+\newpage \input{preamble/declaration}
+\newpage \input{preamble/collaborators}
+\newpage \input{preamble/publications}
+\newpage \input{preamble/abstract}
+\newpage \input{preamble/acknowledgements}
+\newpage \input{preamble/dedication}
+%-----------------------------------------------------------------------
+\newpage
+\thispagestyle{empty}
+\tableofcontents
+%-----------------------------------------------------------------------
+% defining the main matter of the thesis
+\mainmatter
+%----------------- header and footer ----------------
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+\renewcommand{\headrulewidth}{1pt}        % specifying the thickness of header line
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO, RE]{\thepage}              % page number on left (odd page) and right (even page)
+\fancyhead[RO]{\nouppercase{\leftmark}}   % on odd pages, chapter-name on right
+\fancyhead[LE]{\nouppercase{\rightmark}}  % on even pages, section-name on left
+%----------------------------------------------------
+\input{chapters/00-introduction}          % <USER-IP> input appropriate file
+\begin{center}\rule{2cm}{2pt}\end{center}
+
+\input{chapters/p1-file-name}             % <USER-IP> input appropriate file
+\begin{center}\rule{2cm}{2pt}\end{center}
+
+\input{chapters/p2-file-name}             % <USER-IP> input appropriate file
+\begin{center}\rule{2cm}{2pt}\end{center}
+
+\input{chapters/nn-conclusion}            % <USER-IP> input appropriate file
+\begin{center}\rule{2cm}{2pt}\end{center}
+%----------------------------------------------------
+\begin{appendices}
+  \input{appendix/p1-appendix-filename}   % <USER-IP> input appropriate file
+  \begin{center}\rule{2cm}{2pt}\end{center}
+
+  \input{appendix/p2-appendix-filename}   % <USER-IP> input appropriate file
+  \begin{center}\rule{2cm}{2pt}\end{center}
+
+	\input{appendix/pn-codes}               % <USER-IP> input appropriate file
+\end{appendices}
+%-----------------------------------------------------------------------
+\backmatter   % defining the main matter of the thesis
+\bibliographystyle{classes/tifr-thesis-ads}
+\bibliography{references}
+%-----------------------------------------------------------------------
+\end{document}

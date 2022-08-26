@@ -1,0 +1,232 @@
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+% laboratory and material points
+
+% TRY TOGGLING BETWEEN boldmath and boldmath
+\def\pointM{{\mathscr{M}}}
+\def\pointS{{\mathscr{S}}}
+
+\def\scrL{{\mathscr{L}}}
+\def\bfscrE{{\mathbf{\mathscr{E}}}}
+
+% boldmaths
+%\newcommand{\bfnabla}{\mbox{\boldmath $\bf \nabla$}}
+\def\sfzero{{\mathsf{0}}}
+\def\bfzero{{\mathbf{0}}}
+\def\sfnabla{{\mathsf{\nabla}}}
+\def\scrL{{\mathscr{L}}}
+
+\newcommand{\bfalpha}{{\boldsymbol{\alpha}}}
+\newcommand{\bfbeta}{{\boldsymbol{\beta}}}
+\newcommand{\bfgamma}{{\boldsymbol{\gamma}}}
+\newcommand{\bfdelta}{{\boldsymbol{\delta}}}
+\newcommand{\bfepsilon}{{\boldsymbol{\epsilon}}}
+\newcommand{\bfzeta}{{\boldsymbol{\zeta}}}
+\newcommand{\bfeta}{{\boldsymbol{\eta}}}
+\newcommand{\bftheta}{{\boldsymbol{\theta}}}
+\newcommand{\bfiota}{{\boldsymbol{\iota}}}
+\newcommand{\bfkappa}{{\boldsymbol{\kappa}}}
+\newcommand{\bflambda}{{\boldsymbol{\lambda}}}
+\newcommand{\bfmu}{{\boldsymbol{\mu}}}
+\newcommand{\bfnu}{{\boldsymbol{\nu}}}
+\newcommand{\bfxi}{{\boldsymbol{\xi}}}
+\newcommand{\bfpi}{{\boldsymbol{\pi}}}
+\newcommand{\bfrho}{{\boldsymbol{\rho}}}
+\newcommand{\bfsigma}{{\boldsymbol{\sigma}}}
+\newcommand{\bftau}{{\boldsymbol{\tau}}}
+\newcommand{\bfupsilon}{{\boldsymbol{\upsilon}}}
+\newcommand{\bfphi}{{\boldsymbol{\phi}}}
+\newcommand{\bfchi}{{\boldsymbol{\chi}}}
+\newcommand{\bfpsi}{{\boldsymbol{\psi}}}
+\newcommand{\bfomega}{{\boldsymbol{\omega}}}
+\newcommand{\bfnabla}{{\boldsymbol{\nabla}}}
+
+% bold var-x commands
+\newcommand{\bfvartheta}{{\boldsymbol{\vartheta}}}
+\newcommand{\bfvarrho}{{\boldsymbol{\varrho}}}
+\newcommand{\bfvarphi}{{\boldsymbol{\varphi}}}
+
+% bold uppercase
+\newcommand{\bfAlpha}{{\boldsymbol{\Alpha}}}
+\newcommand{\bfBeta}{{\boldsymbol{\Beta}}}
+\newcommand{\bfGamma}{{\boldsymbol{\Gamma}}}
+\newcommand{\bfDelta}{{\boldsymbol{\Delta}}}
+\newcommand{\bfTheta}{{\boldsymbol{\Theta}}}
+\newcommand{\bfLambda}{{\boldsymbol{\Lambda}}}
+\newcommand{\bfXi}{{\boldsymbol{\Xi}}}
+\newcommand{\bfPi}{{\boldsymbol{\Pi}}}
+\newcommand{\bfSigma}{{\boldsymbol{\Sigma}}}
+\newcommand{\bfUpsilon}{{\boldsymbol{\Upsilon}}}
+\newcommand{\bfPhi}{{\boldsymbol{\Phi}}}
+\newcommand{\bfPsi}{{\boldsymbol{\Psi}}}
+\newcommand{\bfOmega}{{\boldsymbol{\Omega}}}
+
+
+% Roman d for integrations
+\def\rmd{{\mathrm{d}}}
+\def\rmD{{\mathrm{D}}}
+
+% triple dot product
+\newcommand{\tdot}{\,.\hspace{-0.98 mm}\raise.6ex\hbox{.}
+                   \hspace{-0.98 mm}\raise1.2ex\hbox{.}\,}
+
+% bold sans serif
+\def\bsfa{{\textbf{\textsf{a}}}}
+\def\bsfb{{\textbf{\textsf{b}}}}
+\def\bsfc{{\textbf{\textsf{c}}}}
+\def\bsfd{{\textbf{\textsf{d}}}}
+\def\bsfe{{\textbf{\textsf{e}}}}
+\def\bsff{{\textbf{\textsf{f}}}}
+\def\bsfg{{\textbf{\textsf{g}}}}
+\def\bsfh{{\textbf{\textsf{h}}}}
+\def\bsfl{{\textbf{\textsf{l}}}}
+\def\bsfi{{\textbf{\textsf{i}}}}
+\def\bsfI{{\textbf{\textsf{I}}}}
+\def\bsfj{{\textbf{\textsf{j}}}}
+\def\bsfk{{\textbf{\textsf{k}}}}
+\def\bsfm{{\textbf{\textsf{m}}}}
+\def\bsfn{{\textbf{\textsf{n}}}}
+\def\bsfp{{\textbf{\textsf{p}}}}
+\def\bsfq{{\textbf{\textsf{q}}}}
+\def\bsfr{{\textbf{\textsf{r}}}}
+\def\bsfs{{\textbf{\textsf{s}}}}
+\def\bsft{{\textbf{\textsf{t}}}}
+\def\bsfu{{\textbf{\textsf{u}}}}
+\def\bsfv{{\textbf{\textsf{v}}}}
+\def\bsfw{{\textbf{\textsf{w}}}}
+\def\bsfx{{\textbf{\textsf{x}}}}
+\def\bsfy{{\textbf{\textsf{y}}}}
+\def\bsfz{{\textbf{\textsf{z}}}}
+
+% bold lowercase Roman
+\def\bfa{{\mathbf{a}}}
+\def\bfb{{\mathbf{b}}}
+\def\bfc{{\mathbf{c}}}
+\def\bfd{{\mathbf{d}}}
+\def\bfe{{\mathbf{e}}}
+\def\bff{{\mathbf{f}}}
+\def\bfg{{\mathbf{g}}}
+\def\bfh{{\mathbf{h}}}
+\def\bfi{{\mathbf{i}}}
+\def\bfj{{\mathbf{j}}}
+\def\bfk{{\mathbf{k}}}
+\def\bfl{{\mathbf{l}}}
+\def\bfm{{\mathbf{m}}}
+\def\bfn{{\mathbf{n}}}
+\def\bfp{{\mathbf{p}}}
+\def\bfq{{\mathbf{q}}}
+\def\bfr{{\mathbf{r}}}
+\def\bfs{{\mathbf{s}}}
+\def\bft{{\mathbf{t}}}
+\def\bfu{{\mathbf{u}}}
+\def\bfv{{\mathbf{v}}}
+\def\bfw{{\mathbf{w}}}
+\def\bfx{{\mathbf{x}}}
+\def\bfy{{\mathbf{y}}}
+\def\bfz{{\mathbf{z}}}
+
+% bold uppercase Roman
+\def\bfA{{\mathbf{A}}}
+\def\bfB{{\mathbf{B}}}
+\def\bfC{{\mathbf{C}}}
+\def\bfD{{\mathbf{D}}}
+\def\bfE{{\mathbf{E}}}
+\def\bfF{{\mathbf{F}}}
+\def\bfG{{\mathbf{G}}}
+\def\bfH{{\mathbf{H}}}
+\def\bfI{{\mathbf{I}}}
+\def\bfJ{{\mathbf{J}}}
+\def\bfK{{\mathbf{K}}}
+\def\bfL{{\mathbf{L}}}
+\def\bfM{{\mathbf{M}}}
+\def\bfN{{\mathbf{N}}}
+\def\bfP{{\mathbf{P}}}
+\def\bfQ{{\mathbf{Q}}}
+\def\bfS{{\mathbf{S}}}
+\def\bfT{{\mathbf{T}}}
+\def\bfU{{\mathbf{U}}}
+\def\bfV{{\mathbf{V}}}
+\def\bfW{{\mathbf{W}}}
+\def\bfX{{\mathbf{X}}}
+\def\bfY{{\mathbf{Y}}}
+\def\bfZ{{\mathbf{Z}}}
+
+%script characters
+\def\mcA{{\mathcal{A}}}
+\def\mcB{{\mathcal{B}}}
+\def\mcC{{\mathcal{C}}}
+\def\mcD{{\mathcal{D}}}
+\def\mcE{{\mathcal{E}}}
+\def\mcF{{\mathcal{F}}}
+\def\mcG{{\mathcal{G}}}
+\def\mcH{{\mathcal{H}}}
+\def\mcI{{\mathcal{I}}}
+\def\mcJ{{\mathcal{J}}}
+\def\mcK{{\mathcal{K}}}
+\def\mcL{{\mathcal{L}}}
+\def\mcM{{\mathcal{M}}}
+\def\mcN{{\mathcal{N}}}
+\def\mcO{{\mathcal{O}}}
+\def\mcP{{\mathcal{P}}}
+\def\mcQ{{\mathcal{Q}}}
+\def\mcR{{\mathcal{R}}}
+\def\mcS{{\mathcal{S}}}
+\def\mcT{{\mathcal{T}}}
+\def\mcU{{\mathcal{U}}}
+\def\mcV{{\mathcal{V}}}
+\def\mcW{{\mathcal{W}}}
+\def\mcX{{\mathcal{X}}}
+\def\mcY{{\mathcal{Y}}}
+\def\mcZ{{\mathcal{Z}}}
+
+
+% sans serif
+\newcommand{\sfA}{\mbox{${\sf A}$}}
+\newcommand{\sfB}{\mbox{${\sf B}$}}
+\newcommand{\sfC}{\mbox{${\sf C}$}}
+\newcommand{\sfD}{\mbox{${\sf D}$}}
+\newcommand{\sfE}{\mbox{${\sf E}$}}
+\newcommand{\sfF}{\mbox{${\sf F}$}}
+\newcommand{\sfG}{\mbox{${\sf G}$}}
+\newcommand{\sfH}{\mbox{${\sf H}$}}
+\newcommand{\sfI}{\mbox{${\sf I}$}}
+\newcommand{\sfJ}{\mbox{${\sf J}$}}
+\newcommand{\sfK}{\mbox{${\sf K}$}}
+\newcommand{\sfL}{\mbox{${\sf L}$}}
+\newcommand{\sfM}{\mbox{${\sf M}$}}
+\newcommand{\sfN}{\mbox{${\sf N}$}}
+\newcommand{\sfO}{\mbox{${\sf O}$}}
+\newcommand{\sfP}{\mbox{${\sf P}$}}
+\newcommand{\sfQ}{\mbox{${\sf Q}$}}
+\newcommand{\sfR}{\mbox{${\sf R}$}}
+\newcommand{\sfS}{\mbox{${\sf S}$}}
+\newcommand{\sfT}{\mbox{${\sf T}$}}
+\newcommand{\sfU}{\mbox{${\sf U}$}}
+\newcommand{\sfV}{\mbox{${\sf V}$}}
+\newcommand{\sfW}{\mbox{${\sf W}$}}
+\newcommand{\sfX}{\mbox{${\sf X}$}}
+\newcommand{\sfY}{\mbox{${\sf Y}$}}
+\newcommand{\sfZ}{\mbox{${\sf Z}$}}
+\newcommand{\sftau}{\mbox{${\sf \tau}$}}
+\newcommand{\sfLambda}{\mbox{${\sf \Lambda}$}}
+\newcommand{\sfDelta}{\mbox{${\sf \Delta}$}}
+\newcommand{\sfOmega}{\mbox{${\sf \Omega}$}}
+\newcommand{\sfGamma}{\mbox{${\sf \Gamma}$}}
+
+
+\newcommand{\mockpicture}{\fbox{\rule{0pt}{1cm}\rule{2cm}{0pt}}}
+\newcommand{\omref}{\ensuremath{\omega_{\rm{ref}}}}
+\newcommand{\grad}{\ensuremath{\bm{\nabla}}}
+\newcommand{\inner}[2]{\ensuremath{\langle#1|#2\rangle}}
+\newcommand{\xiv}{\boldmath{\xi}}
+\newcommand{\tilxiv}{\tilde{\boldmath{\xi}}}
+\newcommand{\ints}{\int_{\odot} \,}
+\newcommand{\rvec}{\ensuremath{\mathbf{r}}}
+\newcommand{\wigfull}[6]{\bigg(\begin{smallmatrix} #1 & #2 & #3 \\#4 & #5 & #6 \end{smallmatrix}\bigg)\,}
+\newcommand{\wigred}[3]{\bigg(\begin{smallmatrix} \ell' & s & \ell \\ #1 & #2 & #3 \end{smallmatrix}\bigg)\,}
+\newcommand{\wig}[6]{\begin{pmatrix}#1 & #2 & #3 \\#4 & #5 & #6\end{pmatrix}}
+%\newcommand{\wigred}[3]{\left(\wigfull{\ell '}{s}{\ell}{#1}{#2}{#3}}
+%\newcommand\aastex{AAS\TeX}
+%\newcommand\latex{La\TeX}
+

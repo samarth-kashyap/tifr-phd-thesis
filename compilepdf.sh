@@ -1,0 +1,5 @@
+latexmk thesis.tex --interaction=nonstopmode
+latexmk thesis.tex --interaction=nonstopmode
+latexmk thesis.tex --interaction=nonstopmode
+bibtex thesis
+pdflatex thesis.tex

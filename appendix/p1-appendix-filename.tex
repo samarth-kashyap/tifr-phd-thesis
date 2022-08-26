@@ -1,0 +1,27 @@
+\chapter{Appendices for Chapter \ref{chap:p1-rotation-coupling}}
+\label{chap:apdx-p1}
+\section{Spherical harmonics symmetry relations}
+\label{apdx:p1-sph-symm}
+Consider a time-varying, real-valued scalar field on a sphere
+\(\phi(\theta, \phi, t)\). The
+spherical harmonic components are given by
+\begin{equation}
+    \phi^{l,|m|}(t) = \int_\Omega \rmd\Omega Y^{*l, |m|}(\theta, \phi)
+    \phi(\theta, \phi, t)
+    = (-1)^{|m|} \int_\Omega \rmd\Omega Y^{l, -|m|} \phi(\theta, \phi, t)
+    = (-1)^{|m|} \phi^{*l, -|m|}(t)
+\end{equation}
+where $d\Omega$ is the area element, the integration being performed over
+the entire surface of the sphere.
+After performing a temporal Fourier transform, we have
+\begin{equation}
+    \phi^{l,|m|}(\omega) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \rmd t
+    e^{-i\omega t} \phi^{l, |m|}(t)
+    = (-1)^{|m|} \frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty \rmd t
+    e^{-i\omega t} \phi^{* l, -|m|}(t)
+\end{equation}
+\begin{equation}
+\phi^{*l, -|m|}(\omega) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^\infty \rmd t e^{i\omega t}
+\phi^{*l, -|m|}(t) = (-1)^{|m|} \phi^{l, |m|}(-\omega) \implies
+\phi^{l, -|m|}(\omega) = (-1)^{|m|} \phi^{*l, |m|}(-\omega)
+\end{equation}

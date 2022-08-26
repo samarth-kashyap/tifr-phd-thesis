@@ -1,0 +1,15 @@
+*.log
+*.aux
+*.txt
+*.toc
+*.bbl
+*.dvi
+*.out
+*.blg
+*.brf
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+.kile
+.DS_Store
+declaration.pdf
