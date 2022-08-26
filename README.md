@@ -6,7 +6,7 @@ The main file that is compiled is `thesis.tex`.
 
 
 ## Directory structure 
-This format is stored in a [public repository](https://github.com/samarth-kashyap/tifr-thesis)
+This format is stored in a [public repository](https://github.com/samarth-kashyap/tifr-thesis).
 All the other files are organized under the main directory under the following
 directory names
 1. `tifr-thesis/preamble`: contains the title page and all the other mandatory 
