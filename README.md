@@ -2,7 +2,9 @@ LaTeX format for PhD thesis in Physics at the Tata Institute of Fundamental Rese
 This is based on the LaTeX "book" class. The document format used here are in 
 accordance to the specifications mentioned on the website of 
 Subject Board of Physics, TIFR and formats presented on Datanet2.0. 
-The main file that is compiled is `thesis.tex`.
+The main file that is compiled is `thesis.tex`. 
+**NOTE**: `\lipsum` is used to put in placeholder text. Please delete the lines
+to remove the placeholder text.
 
 
 ## Directory structure 
