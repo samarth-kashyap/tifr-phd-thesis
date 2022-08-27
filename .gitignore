@@ -10,6 +10,8 @@
 *.synctex.gz
 *.fdb_latexmk
 *.fls
+*.lot
+*.lof
 .kile
 .DS_Store
 declaration.pdf

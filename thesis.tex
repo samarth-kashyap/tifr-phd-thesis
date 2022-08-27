@@ -161,18 +161,19 @@
 % tifr-thesis/preamble
 \newpage \input{preamble/declaration}
 \newpage \input{preamble/collaborators}
-\newpage \input{preamble/abstract}
 \newpage \input{preamble/acknowledgements}
 \newpage \input{preamble/dedication}
+\newpage \input{preamble/abstract}
 %-----------------------------------------------------------------------
 \newpage
-\thispagestyle{empty}
 \tableofcontents
 \newpage \input{preamble/publications}
 %
 \newpage
-\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
+
+\addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
 %-----------------------------------------------------------------------
 % defining the main matter of the thesis
